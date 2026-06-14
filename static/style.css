@@ -1,10 +1,7 @@
-/* style.css */
-
-/* Базови настройки за цялата страница */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Унифициран фон */
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,47 +10,101 @@ body {
     min-height: 100vh;
 }
 
-/* Навигационното меню */
 nav {
-    background-color: #2c3e50;
+    background-color: #1a252f;
     width: 100%;
     padding: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #1abc9c; /* Променя цвета при посочване с мишката */
+    color: #3498db;
 }
 
-/* Основният контейнер за съдържанието */
 .container {
-    background-color: white;
+    background-color: #ffffff;
+    color: #333333;
     padding: 40px;
-    margin-top: 50px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    max-width: 600px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 850px;
     width: 90%;
-    text-align: center;
+    box-sizing: border-box;
 }
 
 h1 {
     color: #2c3e50;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
+/* Стил за карта със събитие (Използва таблично разпределение за картинка вляво, текст вдясно) */
+.event-box {
+    display: table;
+    width: 100%;
+    background: #f8f9fa;
+    border-left: 5px solid #2a5298;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.event-img-cell {
+    display: table-cell;
+    width: 160px;
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+.event-img-cell img {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event-text-cell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.event-text-cell h3 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+.event-text-cell p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.btn-add {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #219653;
 }
