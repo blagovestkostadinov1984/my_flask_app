@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>🌍 Удивителни Географски Факти</h1>
+    <p>Открийте невероятни рекорди и природни феномени на нашата планета.</p>
+
+    {% if logged_in %}
+        <a href="#" class="btn-add">+ Добави нов географски факт</a>
+    {% endif %}
+
+    {% for fact in facts %}
+        <div class="event-box" style="border-left-color: #3498db;">
+            <div class="event-img-cell">
+                <img src="{{ fact.img }}" alt="{{ fact.title }}">
+            </div>
+            <div class="event-text-cell">
+                <h3>{{ fact.title }}</h3>
+                <p>{{ fact.desc }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

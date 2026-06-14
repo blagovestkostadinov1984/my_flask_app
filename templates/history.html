@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>📜 Велики Исторически Събития</h1>
+    <p>Прочетете за най-важните моменти, оформили облика на съвременния свят.</p>
+
+    {% if logged_in %}
+        <a href="#" class="btn-add">+ Добави ново историческо събитие</a>
+    {% endif %}
+
+    {% for event in events %}
+        <div class="event-box" style="border-left-color: #e74c3c;">
+            <div class="event-img-cell">
+                <img src="{{ event.img }}" alt="{{ event.title }}">
+            </div>
+            <div class="event-text-cell">
+                <span style="font-weight: bold; color: #e74c3c;">{{ event.year }}</span>
+                <h3>{{ event.title }}</h3>
+                <p>{{ event.desc }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

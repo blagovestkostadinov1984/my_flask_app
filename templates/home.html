@@ -1,22 +1,43 @@
-<!DOCTYPE html>
-<html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <title>История и География - Начало</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+    <div class="hero-section" style="text-align: center; padding: 40px 20px; background: #f8f9fa; border-radius: 8px; margin-bottom: 40px; box-shadow: inset 0 0 10px rgba(0,0,0,0.05);">
+        <h1 style="font-size: 32px; color: #1e3c72; border: none; margin-bottom: 15px;">
+            Открийте Тайните на Земята и Времето 🌌
+        </h1>
+        <p style="font-size: 18px; color: #555; max-width: 650px; margin: 0 auto 25px auto; line-height: 1.6;">
+            Добре дошли в нашия интерактивен портал. Тук науката среща историята. Изследвайте велики цивилизации, мащабни открития и най-невероятните природни феномени на планетата!
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <a href="/history" style="background: #e74c3c; color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">📜 Към Историята</a>
+            <a href="/geography" style="background: #3498db; color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">🌍 Към Географията</a>
+        </div>
+    </div>
 
-    <h1>Добре дошли в Историческо-Географския Портал!</h1>
-    <p>Тук ще намерите вълнуващи факти за древни цивилизации, велики владетели и невероятни кътчета от нашата планета.</p>
+    <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">Какво ви очаква в портала?</h2>
     
-    <h3>Какво искате да направите?</h3>
-    <a href="/about"><button>Прочети за проекта</button></a>
-    <a href="/register"><button>Регистрирай се</button></a>
+    <div class="home-grid" style="display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap;">
+        
+        <div class="home-card" style="flex: 1; min-width: 220px; background: #fff4f2; padding: 25px; border-radius: 8px; border-top: 5px solid #e74c3c; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="font-size: 40px; margin-bottom: 10px;">⏳</div>
+            <h3 style="color: #e74c3c; margin: 0 0 10px 0;">Епохални Събития</h3>
+            <p style="font-size: 14px; color: #666; margin: 0;">От антични империи до стъпването на Луната. 10 подробни исторически хроники.</p>
+        </div>
 
-    <hr>
-    <h2>Днешен интересен факт:</h2>
-    <p><i>Знаехте ли, че Родопите са една от най-старите планини на Балканския полуостров и са обвеяни в митове за легендарния певец Орфей?</i></p>
+        <div class="home-card" style="flex: 1; min-width: 220px; background: #eef7fc; padding: 25px; border-radius: 8px; border-top: 5px solid #3498db; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="font-size: 40px; margin-bottom: 10px;">🗻</div>
+            <h3 style="color: #3498db; margin: 0 0 10px 0;">Планетарни Рекорди</h3>
+            <p style="font-size: 14px; color: #666; margin: 0;">Мариански падини, гигантски пустини и ледени щитове. 10 изумителни географски факта.</p>
+        </div>
 
-</body>
-</html>
+        <div class="home-card" style="flex: 1; min-width: 220px; background: #eafaf1; padding: 25px; border-radius: 8px; border-top: 5px solid #27ae60; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="font-size: 40px; margin-bottom: 10px;">👥</div>
+            <h3 style="color: #27ae60; margin: 0 0 10px 0;">Общност</h3>
+            <p style="font-size: 14px; color: #666; margin: 0;">Станете част от авторите ни! Регистрирайте се и получете достъп до добавяне на информация.</p>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 50px; text-align: center; font-style: italic; color: #888; font-size: 15px;">
+        "Знанието е единственото съкровище, което се увеличава, когато се споделя."
+    </div>
+{% endblock %}
